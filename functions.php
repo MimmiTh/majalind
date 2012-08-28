@@ -111,6 +111,114 @@ function maja_lind_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'maja_lind_scripts' );
 
+/* Register a Custom Post Type (Slide) */
+add_action('init', 'slide_init');
+function slide_init() {
+	$labels = array(
+		'name' => _x('Slides', 'post type general name'),
+		'singular_name' => _x('Slide', 'post type singular name'),
+		'add_new' => _x('Lägg till', 'slide'),
+		'add_new_item' => __('Lägg till ny slide'),
+		'edit_item' => __('Redigera slide'),
+		'new_item' => __('Ny slide'),
+		'view_item' => __('Visa slide'),
+		'search_items' => __('Sök slides'),
+		'not_found' => __('Inga slides funna'),
+		'not_found_in_trash' => __('Inga slides funna i papperskorgen'), 
+		'parent_item_colon' => '',
+		'menu_name' => 'Bildspel'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true, 
+		'show_in_menu' => true, 
+		'query_var' => true,
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'has_archive' => true, 
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title', 'editor', 'thumbnail'),
+		'register_meta_box_cb' => 'add_slide_link'
+	); 
+	register_post_type('slide', $args);
+}
+
+function add_slide_link() {
+    add_meta_box('slide_link', 'Slide-länk', 'print_slide_link_form', 'slide', 'side', 'default');
+}
+
+function print_slide_link_form() {
+    global $post;
+    // Noncename needed to verify where the data originated
+    echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
+    wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+    // Get the location data if its already been entered
+    $linktext = get_post_meta($post->ID, '_linktext', true);
+        $url = get_post_meta($post->ID, '_url', true);
+    // Echo out the field
+        echo '<label for="_linktext">Länktext:</label>';
+    echo '<input type="text" name="_linktext" value="' . $linktext  . '" class="widefat" />';
+        echo '<label for="_url">URL/Länkadress:</label>';
+        echo '<input type="text" name="_url" value="' . $url  . '" class="widefat" />';
+}
+// Save the Metabox Data
+function save_slide_link($post_id, $post) {
+    // verify this came from the our screen and with proper authorization,
+    // because save_post can be triggered at other times
+    if ( !wp_verify_nonce( $_POST['eventmeta_noncename'], plugin_basename(__FILE__) )) {
+		return $post->ID;
+	}
+	
+    // Is the user allowed to edit the post or page?
+    if ( !current_user_can( 'edit_post', $post->ID ))
+        return $post->ID;
+        
+    // OK, we're authenticated: we need to find and save the data
+    // We'll put it into an array to make it easier to loop though.
+    $slide_link['_linktext'] = $_POST['_linktext'];
+    $slide_link['_url'] = $_POST['_url'];
+    
+    // Add values of $events_meta as custom fields
+    foreach ($slide_link as $key => $value) { // Cycle through the $events_meta array!
+        if( $post->post_type == 'revision' ) return; // Don't store custom data twice
+        
+        $value = implode(',', (array)$value); // If $value is an array, make it a CSV (unlikely)
+        
+        if(get_post_meta($post->ID, $key, FALSE)) { // If the custom field already has a value
+            update_post_meta($post->ID, $key, $value);
+        } else { // If the custom field doesn't have a value
+            add_post_meta($post->ID, $key, $value);
+        }
+        if(!$value) delete_post_meta($post->ID, $key); // Delete if blank
+    }
+}
+add_action('save_post', 'save_slide_link', 1, 2); // save the custom fields
+
+/* Update Slide Messages */
+add_filter('post_updated_messages', 'slide_updated_messages');
+function slide_updated_messages($messages) {
+	global $post, $post_ID;
+	$messages['slide'] = array(
+		0 => '',
+		1 => sprintf(__('Slide uppdaterad.'), esc_url(get_permalink($post_ID))),
+		2 => __('Specialfält uppdaterat.'),
+		3 => __('Specialfält raderat.'),
+		4 => __('Slide uppdaterad.'),
+		5 => isset($_GET['revision']) ? sprintf(__('Slide återställdes till version %s'), wp_post_revision_title((int) $_GET['revision'], false)) : false,
+		6 => sprintf(__('Slide publicerad.'), esc_url(get_permalink($post_ID))),
+		7 => __('Slide sparad.'),
+		8 => sprintf(__('Slide tillagd.'), esc_url(add_query_arg('preview', 'true', get_permalink($post_ID)))),
+		9 => sprintf(__('Slide schemalagd till: <strong>%1$s</strong>. '), date_i18n(__('M j, Y @ G:i'), strtotime($post->post_date)), esc_url(get_permalink($post_ID))),
+		10 => sprintf(__('Slide-utkast uppdaterat.'), esc_url(add_query_arg('preview', 'true', get_permalink($post_ID)))),
+	);
+	return $messages;
+}
+
+
+
 /**
  * Implement the Custom Header feature
  */
