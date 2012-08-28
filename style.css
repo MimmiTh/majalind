@@ -49,7 +49,7 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #AF583A;
 }
 
 article,
@@ -357,25 +357,60 @@ a:active {
 -------------------------------------------------*/
 
 #page {
-	width: 960px;
+	width: 1040px;
 	margin: 0 auto;
-	padding: 30px;
-	background: #EEE;
 }
 
+.site-header hgroup {
+	padding: 20px 40px;
+}
+
+.site-header h1, .site-header h2 {
+	display: inline;
+}
+
+.main-navigation {
+	background: #EEEDE8;
+	width: 960px;
+	padding: 10px 40px;
+}
+
+.main-navigation .menu-item {
+	margin-right: 30px;
+}
+
+#main {
+	width: 960px;
+	padding: 20px 40px;
+	background: #EEEDE8;
+}
+	
 .site-content {
 	width: 600px;
 	float: left;
 	padding: 20px;
-	background: #999;
+	background: #FFF;
 	margin-right: 30px;
 }
 
 .sidebar {
-	width: 250px;
+	width: 290px;
 	float: left;
+}
+
+.widget {
+	width: 250px;
 	padding: 20px;
-	background: #C4C4C4;
+	background: #FFF;
+	margin-bottom: 30px;
+}
+
+.site-footer {
+	background: #373737;
+}
+
+.site-info {
+	padding: 20px 40px;
 }
 
 /* =Menu
@@ -385,7 +420,6 @@ a:active {
 	clear: both;
 	display: block;
 	float: left;
-	width: 100%;
 }
 .main-navigation ul {
 	list-style: none;
