@@ -13,8 +13,8 @@
 
 get_header(); ?>
 
-		<div id="primary" class="site-content">
-			<div id="content" role="main">
+		<div id="main" class="clearfix">
+			<div id="primary" role="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -24,8 +24,8 @@ get_header(); ?>
 
 				<?php endwhile; // end of the loop. ?>
 
-			</div><!-- #content -->
-		</div><!-- #primary .site-content -->
+			</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
+</div><!-- #main -->
 <?php get_footer(); ?>
