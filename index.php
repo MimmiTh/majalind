@@ -33,8 +33,8 @@ get_header(); ?>
 			</ul>
 		</div>
 
-		<div id="primary" class="site-content">
-			<div id="content" role="main">
+		<div id ="main" class="clearfix">
+			<div id="primary" role="main">
 				
 			<?php if ( have_posts() ) : ?>
 
@@ -61,10 +61,10 @@ get_header(); ?>
 
 			<?php endif; ?>
 
-			</div><!-- #content -->
+			</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 
-</div><!-- #primary .site-content -->
+</div><!-- #main -->
 
 <?php get_footer(); ?>

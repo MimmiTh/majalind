@@ -379,17 +379,17 @@ a:active {
 	margin-right: 30px;
 }
 
-#main {
+#wrapper {
 	width: 1040px;
 	background: #EEEDE8;
 }
 
-#primary.site-content {
+#main {
 	width: 960px;
 	padding: 30px 40px;
 }
 	
-#content {
+#primary {
 	width: 600px;
 	float: left;
 	padding: 20px;
@@ -397,7 +397,7 @@ a:active {
 	margin-right: 30px;
 }
 
-.sidebar {
+#secondary {
 	width: 290px;
 	float: left;
 }
@@ -411,6 +411,8 @@ a:active {
 
 .site-footer {
 	background: #373737;
+	margin-bottom: 20px;
+	color: #FFF;
 }
 
 .site-info {
@@ -423,7 +425,6 @@ a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 }
 .main-navigation ul {
 	list-style: none;
@@ -488,7 +489,7 @@ a:active {
 	background: #373737;
 	color: #FFF;
 	border: none;
-	margin: 0;
+	margin: -7px 0 0 0;
 }
 
 ol.flex-control-paging {
