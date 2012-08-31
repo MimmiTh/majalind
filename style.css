@@ -380,12 +380,16 @@ a:active {
 }
 
 #main {
-	width: 960px;
-	padding: 20px 40px;
+	width: 1040px;
 	background: #EEEDE8;
 }
+
+#primary.site-content {
+	width: 960px;
+	padding: 30px 40px;
+}
 	
-.site-content {
+#content {
 	width: 600px;
 	float: left;
 	padding: 20px;
@@ -475,7 +479,36 @@ a:active {
 	display: none;
 }
 
+/* Content slider
+ * ...........................................*/
 
+.flexslider {
+	padding: 30px 40px;
+	width: 960px;
+	background: #373737;
+	color: #FFF;
+	border: none;
+	margin: 0;
+}
+
+ol.flex-control-paging {
+	display: none;
+}
+
+.slide-left {
+	width: 400px;
+	float: left;
+	margin-right: 30px;
+}
+
+.slide-right {
+	width: 530px;
+	float: left;
+}
+
+ul.slides {
+	margin: 0;
+}
 /* =Content
 ----------------------------------------------- */
 

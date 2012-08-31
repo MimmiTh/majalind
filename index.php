@@ -14,9 +14,28 @@
 
 get_header(); ?>
 
+		<div id="content-slider" class="flexslider">
+			<ul class="slides">
+			<?php $args = array( 'post_type' => 'slide', 'posts_per_page' => 5 );
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post();
+				echo '<li class="slide clearfix">';
+				echo '<div class="slide-left">';
+				the_post_thumbnail('slide-img');
+				echo '</div>';
+				echo '<div class="slide-right">';						
+				the_title();
+				the_content();
+				echo '<a href="'.get_post_meta($post->ID, '_url', true).'">'.get_post_meta($post->ID, '_linktext', true).'</a>';
+				echo '</div>';
+				echo '</li>';
+			endwhile; ?>
+			</ul>
+		</div>
+
 		<div id="primary" class="site-content">
 			<div id="content" role="main">
-
+				
 			<?php if ( have_posts() ) : ?>
 
 				<?php maja_lind_content_nav( 'nav-above' ); ?>
@@ -43,7 +62,9 @@ get_header(); ?>
 			<?php endif; ?>
 
 			</div><!-- #content -->
-		</div><!-- #primary .site-content -->
 
 <?php get_sidebar(); ?>
+
+</div><!-- #primary .site-content -->
+
 <?php get_footer(); ?>

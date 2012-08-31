@@ -58,6 +58,8 @@ function maja_lind_setup() {
 	 * Enable support for Post Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 400, 250);
+	add_image_size('slide-img', 400, 250 );
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
@@ -161,7 +163,7 @@ function print_slide_link_form() {
     // Echo out the field
         echo '<label for="_linktext">Länktext:</label>';
     echo '<input type="text" name="_linktext" value="' . $linktext  . '" class="widefat" />';
-        echo '<label for="_url">URL/Länkadress:</label>';
+        echo '<label for="_url">URL/Länkadress: (Glöm inte http://)</label>';
         echo '<input type="text" name="_url" value="' . $url  . '" class="widefat" />';
 }
 // Save the Metabox Data
