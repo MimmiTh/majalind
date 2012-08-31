@@ -15,7 +15,15 @@
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
+	
+	<?php switch ( $wp_query->current_post ) {
+        case 0 :
+            the_post_thumbnail( 'post-img' );
+            break;
+        default :
+            // All other image code here
+    } ?>
+    
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
@@ -23,6 +31,7 @@
 	<?php else : ?>
 	<div class="entry-content">
 		<?php the_content( __( 'Läs mer <span class="meta-nav">&rarr;</span>', 'maja_lind' ) ); ?>
+		<a href="<?php the_permalink ?>" class="read-more">Läs mer &raquo;</a>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Sidor:', 'maja_lind' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>

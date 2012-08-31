@@ -57,9 +57,15 @@ function maja_lind_setup() {
 	/**
 	 * Enable support for Post Thumbnails
 	 */
+	
+	
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 400, 250);
-	add_image_size('slide-img', 400, 250 );
+
+
+if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size( 'slide-img', 400, 250 );
+	add_image_size( 'post-img', 600, 200, true);
+}
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.

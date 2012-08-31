@@ -388,13 +388,18 @@ a:active {
 	width: 960px;
 	padding: 30px 40px;
 }
-	
+
 #primary {
-	width: 600px;
 	float: left;
+	width: 640px;
+	margin-right: 30px;
+}
+		
+#primary .post {
+	width: 600px;
 	padding: 20px;
 	background: #FFF;
-	margin-right: 30px;
+	margin-bottom: 30px;
 }
 
 #primary.page {
@@ -542,6 +547,9 @@ ul.slides {
 	margin: 0 0 1.5em;
 }
 
+.home .entry-content {
+	max-height: 70px;
+}
 
 /* =Asides
 ----------------------------------------------- */

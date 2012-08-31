@@ -49,6 +49,14 @@
   });
 </script>
 
+<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.dotdotdot-1.5.1.js"></script>
+
+<script>$(document).ready(function() {
+	$(".home .entry-content").dotdotdot({
+		after: "a.read-more"
+	});
+});</script>
+
 <?php wp_head(); ?>
 </head>
 
