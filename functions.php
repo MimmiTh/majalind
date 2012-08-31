@@ -83,8 +83,29 @@ add_action( 'after_setup_theme', 'maja_lind_setup' );
  */
 function maja_lind_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'maja_lind' ),
+		'name' => __( 'Sidomeny', 'maja_lind' ),
+		'description' => __('Sidomeny för startsidan'),
 		'id' => 'sidebar-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h1 class="widget-title">',
+		'after_title' => '</h1>',
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Bloggsidomeny', 'maja_lind' ),
+		'description' => __('Sidomeny för nyhetssidan'),
+		'id' => 'sidebar-blog',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h1 class="widget-title">',
+		'after_title' => '</h1>',
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Footer', 'maja_lind' ),
+		'description' => __('Footer. OBS! Endast tre widgets ryms.'),
+		'id' => 'footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h1 class="widget-title">',

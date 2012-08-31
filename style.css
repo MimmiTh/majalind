@@ -397,6 +397,11 @@ a:active {
 	margin-right: 30px;
 }
 
+#primary.page {
+	width: 920px;
+	margin: 0;
+}
+
 #secondary {
 	width: 290px;
 	float: left;
@@ -656,6 +661,24 @@ object {
 	display: none;
 }
 
+/* Footer 
+-------------------------------------------------*/
+.site-footer {
+	width: 960px;
+	padding: 30px 40px;
+}
+
+.site-footer aside {
+	float: left;
+	background: transparent;
+	padding: 0;
+	width: 290px;
+	margin-right: 45px;
+}
+
+.site-footer aside:nth-child(3n+3) {
+	margin: 0;
+}
 /* Clearfix
 -------------------------------------------*/
 

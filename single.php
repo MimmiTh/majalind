@@ -29,7 +29,7 @@ get_header(); ?>
 
 			</div><!-- #primary-->
 
-<?php get_sidebar(); ?>
+<?php get_sidebar('blog'); ?>
 
 </div><!-- #main -->
 <?php get_footer(); ?>

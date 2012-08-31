@@ -14,7 +14,7 @@
 get_header(); ?>
 
 		<div id="main" class="clearfix">
-			<div id="primary" role="main">
+			<div id="primary" role="main" class="page">
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -26,6 +26,5 @@ get_header(); ?>
 
 			</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 </div><!-- #main -->
 <?php get_footer(); ?>
