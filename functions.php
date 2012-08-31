@@ -140,6 +140,40 @@ function maja_lind_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'maja_lind_scripts' );
 
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+	register_post_type( 'publications',
+		array(
+			'labels' => array(
+				'name' => _x('Publikationer', 'post type general name'),
+				'singular_name' => _x('Publikation', 'post type singular name'),
+				'add_new' => _x('Lägg till', 'slide'),
+				'add_new_item' => __('Lägg till ny publikation'),
+				'edit_item' => __('Redigera publikation'),
+				'new_item' => __('Ny publikation'),
+				'view_item' => __('Visa publikation'),
+				'search_items' => __('Sök publikationer'),
+				'not_found' => __('Inga publikationer funna'),
+				'not_found_in_trash' => __('Inga publikationer funna i papperskorgen'), 
+				'parent_item_colon' => '',
+				'menu_name' => 'Publikationer',
+			),
+			
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true, 
+		'show_in_menu' => true, 
+		'query_var' => true,
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'has_archive' => true, 
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title', 'editor', 'thumbnail'),
+		)
+	);
+}
+
 /* Register a Custom Post Type (Slide) */
 add_action('init', 'slide_init');
 function slide_init() {

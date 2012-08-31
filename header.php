@@ -77,5 +77,5 @@
 			<h1 class="assistive-text"><?php _e( 'Menu', 'maja_lind' ); ?></h1>
 			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'maja_lind' ); ?>"><?php _e( 'Skip to content', 'maja_lind' ); ?></a></div>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary') ); ?>
 		</nav><!-- .site-navigation .main-navigation -->

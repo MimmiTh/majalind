@@ -370,9 +370,21 @@ a:active {
 }
 
 .main-navigation {
-	background: #EEEDE8;
+	background: #373737;
 	width: 960px;
 	padding: 10px 40px;
+}
+
+.main-navigation a {
+	color: #FFF;
+}
+
+.home .main-navigation {
+	background: #EEEDE8;
+}
+
+.home .main-navigation a {
+	color: #373737;
 }
 
 .main-navigation .menu-item {
@@ -404,7 +416,9 @@ a:active {
 
 #primary.page {
 	width: 920px;
+	padding: 20px;
 	margin: 0;
+	background: #FFF;
 }
 
 #secondary {
@@ -427,6 +441,42 @@ a:active {
 
 .site-info {
 	padding: 20px 40px;
+}
+
+/* Publications */
+#primary.publications {
+	width: 960px;
+	padding: 0;
+	margin: 0;
+}
+
+.publication {
+	width: 425px;
+	padding: 20px;
+	background: #FFF;
+	margin-bottom: 30px;
+	margin-right: 20px;
+	float: left;
+}
+
+.publication:nth-child(2n+2) {
+	margin-right: 0;
+}
+
+.publication img {
+	width: 150px;
+	height: 200px;
+}
+
+.publications-left {
+	width: 150px;
+	margin-right: 20px;
+	float: left;
+}
+
+.publications-right {
+	width: 255px;
+	float: left;
 }
 
 /* =Menu
