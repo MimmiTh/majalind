@@ -397,9 +397,30 @@ a:active {
 
 /* Header
 --------------------------------------------------*/
-
-.site-header hgroup {
+header#masthead {
 	padding: 20px 40px;
+	width: 960px;
+}
+.site-header hgroup {
+	width: 860px;
+	float: left;
+}
+
+#social-media {
+	width: 100px;
+	float: right;
+}
+
+#social-media img {
+	opacity: 0.6;
+}
+
+#social-media img:hover {
+	opacity: 1.0;
+}
+
+#social-media #facebook {
+	margin-right: 10px;
 }
 
 .site-header h1, .site-header h2 {
