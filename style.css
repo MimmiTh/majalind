@@ -245,7 +245,7 @@ input[type="submit"] {
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	font-size: 12px;
 	font-size: 1.4rem;
-	padding: 1.12em 1.5em .88em;
+	padding: 5px;
 	text-shadow: 0 1px 0 rgba(255,255,255,.5);
 }
 button:hover,
@@ -318,15 +318,14 @@ textarea {
 
 /* Links */
 a {
-	color: royalblue;
+	color: #C54C22;
+	text-decoration: none;
 }
-a:visited {
-	color: purple;
-}
+
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #555;
 }
 
 /* Alignment */
@@ -359,36 +358,6 @@ a:active {
 #page {
 	width: 1040px;
 	margin: 0 auto;
-}
-
-.site-header hgroup {
-	padding: 20px 40px;
-}
-
-.site-header h1, .site-header h2 {
-	display: inline;
-}
-
-.main-navigation {
-	background: #373737;
-	width: 960px;
-	padding: 10px 40px;
-}
-
-.main-navigation a {
-	color: #FFF;
-}
-
-.home .main-navigation {
-	background: #EEEDE8;
-}
-
-.home .main-navigation a {
-	color: #373737;
-}
-
-.main-navigation .menu-item {
-	margin-right: 30px;
 }
 
 #wrapper {
@@ -426,61 +395,54 @@ a:active {
 	float: left;
 }
 
-.widget {
-	width: 250px;
-	padding: 20px;
-	background: #FFF;
-	margin-bottom: 30px;
-}
+/* Header
+--------------------------------------------------*/
 
-.site-footer {
-	background: #373737;
-	margin-bottom: 20px;
-	color: #FFF;
-}
-
-.site-info {
+.site-header hgroup {
 	padding: 20px 40px;
 }
 
-/* Publications */
-#primary.publications {
+.site-header h1, .site-header h2 {
+	display: inline;
+}
+
+.site-title a {
+	color: #FFF;
+	margin-right: 15px;
+}
+
+/* Navigation
+--------------------------------------------------*/
+
+.main-navigation {
+	background: #373737;
 	width: 960px;
-	padding: 0;
-	margin: 0;
+	padding: 10px 40px;
 }
 
-.publication {
-	width: 425px;
-	padding: 20px;
-	background: #FFF;
-	margin-bottom: 30px;
-	margin-right: 20px;
-	float: left;
+.main-navigation a {
+	color: #FFF;
 }
 
-.publication:nth-child(2n+2) {
-	margin-right: 0;
+.main-navigation a:hover {
+	color: #C54C22;
 }
 
-.publication img {
-	width: 150px;
-	height: 200px;
+.home .main-navigation {
+	background: #EEEDE8;
 }
 
-.publications-left {
-	width: 150px;
-	margin-right: 20px;
-	float: left;
+.home .main-navigation a {
+	color: #373737;
 }
 
-.publications-right {
-	width: 255px;
-	float: left;
+.home .main-navigation a:hover {
+	color: #C54C22;
 }
 
-/* =Menu
------------------------------------------------ */
+.main-navigation .menu-item {
+	margin-right: 30px;
+}
 
 .main-navigation {
 	clear: both;
@@ -540,8 +502,45 @@ a:active {
 	display: none;
 }
 
+/* Publications
+---------------------------------------*/
+#primary.publications {
+	width: 960px;
+	padding: 0;
+	margin: 0;
+}
+
+.publication {
+	width: 425px;
+	padding: 20px;
+	background: #FFF;
+	margin-bottom: 30px;
+	margin-right: 20px;
+	float: left;
+}
+
+.publication:nth-child(2n+2) {
+	margin-right: 0;
+}
+
+.publication img {
+	width: 150px;
+	height: 200px;
+}
+
+.publications-left {
+	width: 150px;
+	margin-right: 20px;
+	float: left;
+}
+
+.publications-right {
+	width: 255px;
+	float: left;
+}
+
 /* Content slider
- * ...........................................*/
+---------------------------------------------*/
 
 .flexslider {
 	padding: 30px 40px;
@@ -608,7 +607,6 @@ ul.slides {
 .archive .format-aside .entry-title {
 	display: none;
 }
-
 
 /* =Media
 ----------------------------------------------- */
@@ -683,24 +681,6 @@ object {
 	max-width: 100%;
 }
 
-
-/* =Navigation
------------------------------------------------ */
-
-#content .site-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-#content .nav-previous {
-	float: left;
-	width: 50%;
-}
-#content .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
 /* =Comments
 ----------------------------------------------- */
 
@@ -709,21 +689,35 @@ object {
 
 /* =Widgets
 ----------------------------------------------- */
-
 .widget {
-	margin: 0 0 1.5em;
+	width: 250px;
+	padding: 20px;
+	background: #FFF;
+	margin-bottom: 30px;
 }
 
-/* Search widget */
-#searchsubmit {
-	display: none;
+.widget ul {
+	list-style: none;
+	margin-left: 0;
+}
+
+input#s field {
+	width: 165px;
+	margin-right: 5px;
 }
 
 /* Footer 
 -------------------------------------------------*/
 .site-footer {
+	background: #373737;
+	margin-bottom: 20px;
+	color: #FFF;
 	width: 960px;
 	padding: 30px 40px;
+}
+
+.site-info {
+	padding: 20px 40px;
 }
 
 .site-footer aside {
@@ -737,6 +731,7 @@ object {
 .site-footer aside:nth-child(3n+3) {
 	margin: 0;
 }
+
 /* Clearfix
 -------------------------------------------*/
 
