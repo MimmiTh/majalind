@@ -10,7 +10,9 @@
 				the_post_thumbnail('slide-img');
 				echo '</div>';
 				echo '<div class="slide-right">';						
+				echo '<h2>';
 				the_title();
+				echo '</h2>';				
 				the_content();
 				echo '<a href="'.get_post_meta($post->ID, '_url', true).'">'.get_post_meta($post->ID, '_linktext', true).'</a>';
 				echo '</div>';

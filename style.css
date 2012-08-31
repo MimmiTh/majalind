@@ -41,6 +41,80 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	vertical-align: baseline;
 }
 
+/*Fonts
+-------------------------------------------------*/
+@font-face {
+    font-family: 'jura';
+    src: url('fonts/jura-regular-webfont.eot');
+    src: url('fonts/jura-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/jura-regular-webfont.woff') format('woff'),
+         url('fonts/jura-regular-webfont.ttf') format('truetype'),
+         url('fonts/jura-regular-webfont.svg#juraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'jura';
+    src: url('fonts/jura-bold-webfont.eot');
+    src: url('fonts/jura-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/jura-bold-webfont.woff') format('woff'),
+         url('fonts/jura-bold-webfont.ttf') format('truetype'),
+         url('fonts/jura-bold-webfont.svg#jurabold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'LiberationSans';
+    src: url('fonts/LiberationSans-Regular-webfont.eot');
+    src: url('fonts/LiberationSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/LiberationSans-Regular-webfont.woff') format('woff'),
+         url('fonts/LiberationSans-Regular-webfont.ttf') format('truetype'),
+         url('fonts/LiberationSans-Regular-webfont.svg#LiberationSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'LiberationSans';
+    src: url('fonts/LiberationSans-Italic-webfont.eot');
+    src: url('fonts/LiberationSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/LiberationSans-Italic-webfont.woff') format('woff'),
+         url('fonts/LiberationSans-Italic-webfont.ttf') format('truetype'),
+         url('fonts/LiberationSans-Italic-webfont.svg#LiberationSansItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'LiberationSans';
+    src: url('fonts/LiberationSans-Bold-webfont.eot');
+    src: url('fonts/LiberationSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/LiberationSans-Bold-webfont.woff') format('woff'),
+         url('fonts/LiberationSans-Bold-webfont.ttf') format('truetype'),
+         url('fonts/LiberationSans-Bold-webfont.svg#LiberationSansBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'LiberationSans';
+    src: url('fonts/LiberationSans-BoldItalic-webfont.eot');
+    src: url('fonts/LiberationSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/LiberationSans-BoldItalic-webfont.woff') format('woff'),
+         url('fonts/LiberationSans-BoldItalic-webfont.ttf') format('truetype'),
+         url('fonts/LiberationSans-BoldItalic-webfont.svg#LiberationSansBoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
 html {
 	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
 	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
@@ -106,16 +180,33 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'LiberationSans';
 	font-size: 16px;
-	font-size: 1.6rem;
 	line-height: 1.5;
 }
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
+	font-family: 'jura', serif;
 }
+
+h1 {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -400,6 +491,7 @@ a:active {
 header#masthead {
 	padding: 20px 40px;
 	width: 960px;
+	color: #FFF;
 }
 .site-header hgroup {
 	width: 860px;
@@ -513,6 +605,7 @@ header#masthead {
 }
 .main-navigation li.current_page_item a,
 .main-navigation li.current-menu-item a {
+	font-weight: bold;
 }
 
 /* Small menu */
