@@ -943,24 +943,45 @@ ul.upcoming {
 	position: relative;
 }
 
-ul.upcoming li {
-	margin-bottom: 20px;
+.eventsListWidget {
+	padding: 20px 20px 5px 20px;
 }
 
 .eventsListWidget .when {
 	color: #888;
-	margin-right: 10px;
-	width: 40px;
-	display: inline;
+	margin: 10px 10px 10px 0;
+	width: 45px;
+	padding: 9px 0;
+	float: left;
+	font-size: 14px;
+	text-align: center;
+	border-left: 1px solid #D35F37;
+	font-family: Georgia, serif;
 }
 
 .eventsListWidget .event {
-	width: 200px;
-	display: inline;	
+	width: 194px;
+	float: left;
+	margin-top: 19px;
+}
+
+.eventsListWidget ul.upcoming li {
+	margin: 0 0 5px 0 !important;
+	padding: 0 !important;
 }
 
 .eventsListWidget .event h3 {
 	display: inline;
+	line-height: 0;
+	font-size: 17px;
+}
+
+.event-date {
+	font-size: 18px;
+}
+
+.event-month {
+	font-size: 17px;
 }
 
 .dig-in {
@@ -1001,7 +1022,7 @@ ul.upcoming li {
 /* Clearfix
 -------------------------------------------*/
 
-.clearfix:after {
+.clearfix:after, .tribe_events:after {
 	content: ".";
 	display: block;
 	clear: both;
@@ -1011,10 +1032,10 @@ ul.upcoming li {
 }
  
  
-html[xmlns] .clearfix {
+html[xmlns] .clearfix, html[xmlns] .tribe_events {
 	display: block;
 }
  
-* html .clearfix {
+* html .clearfix, * html .tribe_events {
 	height: 1%;
 }

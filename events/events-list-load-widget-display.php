@@ -33,16 +33,16 @@ $event = (object) $event; //Easier to work with.
 
 ob_start();
 if ( !isset($alt_text) ) { $alt_text = ''; }
-post_class($alt_text,$post->ID);
+post_class($alt_text,$post->ID, 'clearfix');
 $class = ob_get_contents();
 ob_end_clean();
 ?>
 <li <?php echo $class ?>>
 
 	<div class="when">
-		<?php the_time('j/n');			
-      ?> 
-    
+		<span class="event-date"><?php echo tribe_get_start_date( $post->ID, false, 'j' ); ?></span>
+		<br>
+		<span class="event-month"><?php echo tribe_get_start_date( $post->ID, false, 'M' ); ?></span> 
 	</div>
 	
 	<div class="event">
