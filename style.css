@@ -510,7 +510,7 @@ a:active {
 /* Header
 --------------------------------------------------*/
 header#masthead {
-	padding: 20px 40px;
+	padding: 10px 40px;
 	width: 960px;
 	color: #FFF;
 }
@@ -522,6 +522,7 @@ header#masthead {
 #social-media {
 	width: 100px;
 	float: right;
+	margin-top: 7px;
 }
 
 #social-media img {
@@ -557,12 +558,12 @@ header#masthead {
 
 .main-navigation {
 	background: #474747; /* Old browsers */
-background: -moz-linear-gradient(top, #474747 0%, #333333 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#474747), color-stop(100%,#333333)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #474747 0%,#333333 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #474747 0%,#333333 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #474747 0%,#333333 100%); /* IE10+ */
-background: linear-gradient(to bottom, #474747 0%,#333333 100%); /* W3C */
+	background: -moz-linear-gradient(top, #474747 0%, #333333 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#474747), color-stop(100%,#333333)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #474747 0%,#333333 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #474747 0%,#333333 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #474747 0%,#333333 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #474747 0%,#333333 100%); /* W3C */
 	width: 960px;
 	padding: 10px 40px;
 	-webkit-border-radius: 5px 5px 0px 0px;
@@ -571,6 +572,7 @@ background: linear-gradient(to bottom, #474747 0%,#333333 100%); /* W3C */
 
 .main-navigation a {
 	color: #FFF;
+	text-shadow: 0px 1px 1px #000;
 }
 
 .main-navigation a:hover {
@@ -590,6 +592,7 @@ background: linear-gradient(to bottom, #474747 0%,#333333 100%); /* W3C */
 
 .home .main-navigation a {
 	color: #373737;
+	text-shadow: 0px 1px 1px #FFF;
 }
 
 .home .main-navigation a:hover {
@@ -881,6 +884,10 @@ input#s field {
 	padding: 30px 40px;
 	-webkit-border-radius: 0px 0px 5px 5px;
     border-radius: 0px 0px 5px 5px;
+}
+
+.site-footer h2 {
+	text-shadow: 0px 1px 1px #000000;
 }
 
 .site-info {
