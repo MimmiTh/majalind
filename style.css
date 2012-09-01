@@ -426,7 +426,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-	color: #555;
+	color: #333;
 }
 
 /* Alignment */
@@ -489,8 +489,8 @@ a:active {
 	padding: 20px;
 	background: #FFF;
 	margin-bottom: 30px;
-	-webkit-box-shadow:  0px 5px 20px 0px rgba(128, 128, 128, 0.1);        
-    box-shadow:  0px 5px 20px 0px rgba(128, 128, 128, 0.1);
+	-webkit-box-shadow:  0px 5px 20px 0px rgba(196, 193, 183, 0.1);        
+    box-shadow:  0px 5px 20px 0px rgba(196, 193, 183, 0.1);
 }
 
 #primary.page {
@@ -498,8 +498,8 @@ a:active {
 	padding: 20px;
 	margin: 0 0 30px 0;
 	background: #FFF;
-	-webkit-box-shadow: 0px 5px 20px 0px rgba(128, 128, 128, 0.1);
-box-shadow: 0px 5px 20px 0px rgba(128, 128, 128, 0.1);
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
+	box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
 }
 
 #secondary {
@@ -508,8 +508,8 @@ box-shadow: 0px 5px 20px 0px rgba(128, 128, 128, 0.1);
 }
 
 #secondary .widget {
-	-webkit-box-shadow:  0px 5px 20px 0px rgba(128, 128, 128, 0.1);        
-    box-shadow:  0px 5px 20px 0px rgba(128, 128, 128, 0.1);
+	-webkit-box-shadow:  0px 5px 20px 0px rgba(196, 193, 183, 0.1);        
+    box-shadow:  0px 5px 20px 0px rgba(196, 193, 183, 0.1);
 }
 
 /* Header
@@ -720,8 +720,8 @@ header#masthead {
 	float: left;
 	height: 210px;
 	overflow: hidden;
-	-webkit-box-shadow: 0px 5px 20px 0px rgba(128, 128, 128, 0.1);
-box-shadow: 0px 5px 20px 0px rgba(128, 128, 128, 0.1);
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
+	box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
 }
 
 .publication:nth-child(2n+2) {
@@ -951,8 +951,8 @@ object {
 	background: white;
 	padding: 20px;
 	margin-bottom: 30px;
-	-webkit-box-shadow: 0px 5px 20px 0px rgba(128, 128, 128, 0.1);
-	box-shadow: 0px 5px 20px 0px rgba(128, 128, 128, 0.1);
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
+	box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
 }
 
 /* =Widgets
@@ -1003,6 +1003,11 @@ ul.upcoming {
 .eventsListWidget ul.upcoming li {
 	margin: 0 0 5px 0 !important;
 	padding: 0 !important;
+	border-bottom: 1px solid #EEE;
+}
+
+ul.upcoming li:last-child {
+	border: 0;
 }
 
 .eventsListWidget .event h3 {
@@ -1048,6 +1053,14 @@ ul.upcoming {
 	width: 290px;
 	margin-right: 45px;
 	margin-bottom: 0;
+}
+
+.site-footer a {
+	color: #E25D2F;
+}
+
+.site-footer a:hover {
+	color: #EEECE2;
 }
 
 .site-footer aside:nth-child(3n+3) {
