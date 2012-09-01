@@ -38,16 +38,17 @@ $class = ob_get_contents();
 ob_end_clean();
 ?>
 <li <?php echo $class ?>>
+
+	<div class="when">
+		<?php the_time('j/n');			
+      ?> 
+    
+	</div>
+	
 	<div class="event">
 		<h3><?php echo $post->post_title ?></h3>
 	</div>
-	<div class="when">
-		<?php
-			$space = false;
-			$output = '';
-			echo tribe_get_start_date( $post->ID ); 
-      ?> 
-	</div>
+
 </li>
 
 <?php $alt_text = ( empty( $alt_text ) ) ? 'alt' : ''; ?>

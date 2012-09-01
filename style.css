@@ -939,8 +939,32 @@ input#s field {
 	margin-right: 5px;
 }
 
+ul.upcoming {
+	position: relative;
+}
+
+ul.upcoming li {
+	margin-bottom: 20px;
+}
+
 .eventsListWidget .when {
 	color: #888;
+	margin-right: 10px;
+	width: 40px;
+	display: inline;
+}
+
+.eventsListWidget .event {
+	width: 200px;
+	display: inline;	
+}
+
+.eventsListWidget .event h3 {
+	display: inline;
+}
+
+.dig-in {
+	display: none;
 }
 /* Footer 
 -------------------------------------------------*/
