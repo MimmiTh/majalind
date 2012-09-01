@@ -20,6 +20,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
-		<?php the_category(', ');?><?php edit_post_link( __( 'Redigera inlägg', 'maja_lind' ), '<span class="edit-link">' - '</span>' ); ?>
+		<?php the_category(', ');?> <?php edit_post_link( __( 'Redigera inlägg', 'maja_lind' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

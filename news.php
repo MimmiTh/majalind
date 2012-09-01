@@ -32,7 +32,7 @@ Template Name: Nyheter
 					</div><!-- .entry-content -->
 					
 					<footer class="entry-meta">
-						<?php the_category(', ');?><span class="sep"> - </span><a href="<?php comments_link(); ?>"><?php comments_number( 'Lämna en kommentar', '1 kommentar', '% kommentarer' ); ?></a><?php edit_post_link( __( 'Redigera inlägg', 'maja_lind' ), '<span class="edit-link">' - '</span>' ); ?>
+						<?php the_category(', ');?><span class="sep"> - </span><a href="<?php comments_link(); ?>"><?php comments_number( 'Lämna en kommentar', '1 kommentar', '% kommentarer' ); ?></a><?php edit_post_link( __( 'Redigera inlägg', 'maja_lind' ), '<span class="edit-link">', '</span>' ); ?>
 					</footer><!-- .entry-meta -->
 					
 				</article>

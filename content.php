@@ -28,11 +28,11 @@
     
 	<div class="entry-content">
 		<?php the_content( __( 'Läs mer <span class="meta-nav">&rarr;</span>', 'maja_lind' ) ); ?>
-		<a href="<?php the_permalink ?>" class="read-more">Läs mer &raquo;</a>
+		<a href=" <?php the_permalink(); ?>" class="read-more">Läs mer &raquo;</a>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Sidor:', 'maja_lind' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
-		<?php edit_post_link( __( 'Redigera', 'maja_lind' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Redigera', 'maja_lind' ), '<p class="edit-link">', '</p>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
