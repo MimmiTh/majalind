@@ -1,21 +1,21 @@
 <?php
 /**
- * @package Maja Lind
- * @since Maja Lind 1.0
+ * Inläggen i loopens innehåll.
+ * 
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+
+	<header class="entry-header">		
 		<h2 class="entry-title">
 			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalänk till %s', 'maja_lind' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h2>
-
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<p><?php the_date(); ?></p>
 			</div><!-- .entry-meta -->
-		<?php endif; ?>
+		<?php endif; ?>		
 	</header><!-- .entry-header -->
 	
 	<?php switch ( $wp_query->current_post ) {
@@ -23,7 +23,6 @@
             the_post_thumbnail( 'post-img' );
             break;
         default :
-            // All other image code here
     } ?>
     
 	<div class="entry-content">
@@ -35,4 +34,5 @@
 	<footer class="entry-meta">
 		<?php edit_post_link( __( 'Redigera', 'maja_lind' ), '<p class="edit-link">', '</p>' ); ?>
 	</footer><!-- .entry-meta -->
+	
 </article><!-- #post-<?php the_ID(); ?> -->

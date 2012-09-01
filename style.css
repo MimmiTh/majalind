@@ -19,7 +19,7 @@ and Blueprint http://www.blueprintcss.org/
 */
 
 
-/* =Reset
+/* Reset
 -------------------------------------------------------------- */
 
 html, body, div, span, applet, object, iframe,
@@ -41,8 +41,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	vertical-align: baseline;
 }
 
-/*Fonts
--------------------------------------------------*/
+/* Fonts
+--------------------------------------------------------------- */
+
 @font-face {
     font-family: 'jura';
     src: url('fonts/jura-regular-webfont.eot');
@@ -127,6 +128,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 }
 
+/* Basic styles
+---------------------------------------------------------------- */
+
 html {
 	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
 	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
@@ -138,16 +142,39 @@ body {
 	background: url(images/type.png) #AF583A;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section {
+#page {
+	width: 1040px;
+	margin: 0 auto;
+}
+
+#wrapper {
+	width: 1040px;
+	-webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    -webkit-box-shadow:  0px 3px 10px 0px rgba(119, 60, 39, 1);      
+    box-shadow:  0px 3px 10px 0px rgba(119, 60, 39, 1);
+    margin-top: 69px;
+}
+
+#main {
+	width: 960px;
+	padding: 30px 40px 10px 40px;
+	background: #EEECE2;
+}
+
+#primary {
+	float: left;
+	width: 640px;
+	margin-right: 30px;
+}
+
+#secondary {
+	width: 290px;
+	float: left;
+}	
+	
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
 	display: block;
 }
 
@@ -164,20 +191,25 @@ caption, th, td {
 	font-weight: normal;
 	text-align: left;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: "";
 }
+
 blockquote, q {
 	quotes: "" "";
 }
+
 a:focus {
 	outline: thin dotted;
 }
+
 a:hover,
 a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
 	outline: 0;
 }
+
 a img {
 	border: 0;
 }
@@ -230,37 +262,48 @@ hr {
 p {
 	margin-bottom: 1.5em;
 }
+
 ul, ol {
 	margin: 0 0 1.5em 3em;
 }
+
 ul {
 	list-style: disc;
 }
+
 ol {
 	list-style: decimal;
 }
+
 ul ul, ol ol, ul ol, ol ul {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
+
 dt {
 	font-weight: bold;
 }
+
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
 b, strong {
 	font-weight: bold;
 }
+
 dfn, cite, em, i {
 	font-style: italic;
 }
+
 blockquote {
 	margin: 0 1.5em;
 }
+
 address {
 	margin: 0 0 1.5em;
 }
+
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
@@ -272,17 +315,21 @@ pre {
 	overflow: auto;
 	max-width: 100%;
 }
+
 code, kbd, tt, var {
 	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
+
 abbr, acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
+
 mark, ins {
 	background: #fff9c0;
 	text-decoration: none;
 }
+
 sup,
 sub {
 	font-size: 75%;
@@ -291,28 +338,36 @@ sub {
 	position: relative;
 	vertical-align: baseline;
 }
+
 sup {
 	bottom: 1ex;
 }
+
 sub {
 	top: .5ex;
 }
+
 small {
 	font-size: 75%;
 }
+
 big {
 	font-size: 125%;
 }
+
 figure {
 	margin: 0;
 }
+
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
+
 th {
 	font-weight: bold;
 }
+
 button,
 input,
 select,
@@ -322,11 +377,15 @@ textarea {
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
 }
+
 button,
 input {
 	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
 	*overflow: visible;  /* Corrects inner spacing displayed oddly in IE6/7 */
 }
+
+/* Buttons */
+
 button,
 html input[type="button"],
 input[type="reset"],
@@ -375,6 +434,7 @@ input[type="submit"]:active {
 	box-shadow: inset 0 2px 3px rgba(0,0,0,.15);
 	box-shadow: inset 0 2px 2px rgba(0,0,0,.15);
 }
+
 input[type="checkbox"],
 input[type="radio"] {
 	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
@@ -453,65 +513,6 @@ a:active {
 	position: absolute !important;
 }
 
-/* Layout
--------------------------------------------------*/
-
-#page {
-	width: 1040px;
-	margin: 0 auto;
-}
-
-#wrapper {
-	width: 1040px;
-	-webkit-border-radius: 5px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    -webkit-box-shadow:  0px 3px 10px 0px rgba(119, 60, 39, 1);      
-    box-shadow:  0px 3px 10px 0px rgba(119, 60, 39, 1);
-    position: absolute;
-    top: 70px;
-}
-
-#main {
-	width: 960px;
-	padding: 30px 40px 10px 40px;
-	background: #EEECE2;
-}
-
-#primary {
-	float: left;
-	width: 640px;
-	margin-right: 30px;
-}
-		
-#primary .post {
-	width: 600px;
-	padding: 20px;
-	background: #FFF;
-	margin-bottom: 30px;
-	-webkit-box-shadow:  0px 5px 20px 0px rgba(196, 193, 183, 0.1);        
-    box-shadow:  0px 5px 20px 0px rgba(196, 193, 183, 0.1);
-}
-
-#primary.page {
-	width: 920px;
-	padding: 20px;
-	margin: 0 0 30px 0;
-	background: #FFF;
-	-webkit-box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
-	box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
-}
-
-#secondary {
-	width: 290px;
-	float: left;
-}
-
-#secondary .widget {
-	-webkit-box-shadow:  0px 5px 20px 0px rgba(196, 193, 183, 0.1);        
-    box-shadow:  0px 5px 20px 0px rgba(196, 193, 183, 0.1);
-}
-
 /* Header
 --------------------------------------------------*/
 header#masthead {
@@ -582,6 +583,7 @@ header#masthead {
 .site-title:hover {
 	margin-top: -5px;
 }
+
 /* Navigation
 --------------------------------------------------*/
 
@@ -703,47 +705,6 @@ header#masthead {
 	display: none;
 }
 
-/* Publications
----------------------------------------*/
-#primary.publications {
-	width: 960px;
-	padding: 0;
-	margin: 0;
-}
-
-.publication {
-	width: 425px;
-	padding: 20px;
-	background: #FFF;
-	margin-bottom: 30px;
-	margin-right: 20px;
-	float: left;
-	height: 210px;
-	overflow: hidden;
-	-webkit-box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
-	box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
-}
-
-.publication:nth-child(2n+2) {
-	margin-right: 0;
-}
-
-.publication img {
-	width: 150px;
-	height: 200px;
-}
-
-.publications-left {
-	width: 150px;
-	margin-right: 20px;
-	float: left;
-}
-
-.publications-right {
-	width: 255px;
-	float: left;
-}
-
 /* Content slider
 ---------------------------------------------*/
 
@@ -819,6 +780,14 @@ a.slide-button:active {
 
 /* =Content
 ----------------------------------------------- */
+#primary .post {
+	width: 600px;
+	padding: 20px;
+	background: #FFF;
+	margin-bottom: 30px;
+	-webkit-box-shadow:  0px 5px 20px 0px rgba(196, 193, 183, 0.1);        
+    box-shadow:  0px 5px 20px 0px rgba(196, 193, 183, 0.1);
+}
 
 .sticky {
 }
@@ -861,6 +830,151 @@ p.edit-link {
 span.edit-link {
 	float: right;
 }
+
+/* =Comments
+----------------------------------------------- */
+
+#disqus_thread {
+	background: white;
+	padding: 20px;
+	margin-bottom: 30px;
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
+	box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
+}
+
+/* Pages
+-------------------------------------------------*/
+		
+#primary.page {
+	width: 920px;
+	padding: 20px;
+	margin: 0 0 30px 0;
+	background: #FFF;
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
+	box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
+}
+
+/* Publications
+---------------------------------------*/
+#primary.publications {
+	width: 960px;
+	padding: 0;
+	margin: 0;
+}
+
+.publication {
+	width: 425px;
+	padding: 20px;
+	background: #FFF;
+	margin-bottom: 30px;
+	margin-right: 20px;
+	float: left;
+	height: 210px;
+	overflow: hidden;
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
+	box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
+}
+
+.publication:nth-child(2n+2) {
+	margin-right: 0;
+}
+
+.publication img {
+	width: 150px;
+	height: 200px;
+}
+
+.publications-left {
+	width: 150px;
+	margin-right: 20px;
+	float: left;
+}
+
+.publications-right {
+	width: 255px;
+	float: left;
+}
+
+/* =Widgets
+----------------------------------------------- */
+.widget {
+	width: 250px;
+	padding: 20px;
+	background: #FFF;
+	margin-bottom: 30px;
+}
+
+.widget ul {
+	list-style: none;
+	margin-left: 0;
+}
+
+#secondary .widget {
+	-webkit-box-shadow:  0px 5px 20px 0px rgba(196, 193, 183, 0.1);        
+    box-shadow:  0px 5px 20px 0px rgba(196, 193, 183, 0.1);
+}
+
+/* Search widget */
+input#s field {
+	width: 165px;
+	margin-right: 5px;
+}
+
+/* Events List Widget */
+.eventsListWidget {
+	padding: 20px 20px 5px 20px;
+}
+
+ul.upcoming {
+	position: relative;
+}
+
+.eventsListWidget .when {
+	color: #888;
+	margin: 10px 10px 10px 0;
+	width: 45px;
+	padding: 9px 0;
+	float: left;
+	font-size: 14px;
+	text-align: center;
+	border-left: 1px solid #D35F37;
+	font-family: Georgia, serif;
+}
+
+.eventsListWidget .event {
+	width: 194px;
+	float: left;
+	margin-top: 19px;
+}
+
+.eventsListWidget .event h3 {
+	display: inline;
+	line-height: 0;
+	font-size: 17px;
+}
+
+.eventsListWidget ul.upcoming li {
+	margin: 0 0 5px 0 !important;
+	padding: 0 !important;
+	border-bottom: 1px solid #EEE;
+}
+
+ul.upcoming li:last-child {
+	border: 0;
+}
+
+.event-date {
+	font-size: 18px;
+}
+
+.event-month {
+	font-size: 17px;
+}
+
+.dig-in {
+	display: none;
+}
+
 /* =Asides
 ----------------------------------------------- */
 
@@ -920,8 +1034,6 @@ img.size-full {
 #content .gallery {
 	margin-bottom: 1.5em;
 }
-.gallery-caption {
-}
 #content .gallery a img {
 	border: none;
 	height: auto;
@@ -929,10 +1041,6 @@ img.size-full {
 }
 #content .gallery dd {
 	margin: 0;
-}
-#content .gallery-columns-4 .gallery-item {
-}
-#content .gallery-columns-4 .gallery-item img {
 }
 
 /* Make sure embeds and iframes fit their containers */
@@ -942,91 +1050,6 @@ object {
 	max-width: 100%;
 }
 
-/* =Comments
------------------------------------------------ */
-
-.bypostauthor {
-}
-#disqus_thread {
-	background: white;
-	padding: 20px;
-	margin-bottom: 30px;
-	-webkit-box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
-	box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
-}
-
-/* =Widgets
------------------------------------------------ */
-.widget {
-	width: 250px;
-	padding: 20px;
-	background: #FFF;
-	margin-bottom: 30px;
-}
-
-.widget ul {
-	list-style: none;
-	margin-left: 0;
-}
-
-input#s field {
-	width: 165px;
-	margin-right: 5px;
-}
-
-ul.upcoming {
-	position: relative;
-}
-
-.eventsListWidget {
-	padding: 20px 20px 5px 20px;
-}
-
-.eventsListWidget .when {
-	color: #888;
-	margin: 10px 10px 10px 0;
-	width: 45px;
-	padding: 9px 0;
-	float: left;
-	font-size: 14px;
-	text-align: center;
-	border-left: 1px solid #D35F37;
-	font-family: Georgia, serif;
-}
-
-.eventsListWidget .event {
-	width: 194px;
-	float: left;
-	margin-top: 19px;
-}
-
-.eventsListWidget ul.upcoming li {
-	margin: 0 0 5px 0 !important;
-	padding: 0 !important;
-	border-bottom: 1px solid #EEE;
-}
-
-ul.upcoming li:last-child {
-	border: 0;
-}
-
-.eventsListWidget .event h3 {
-	display: inline;
-	line-height: 0;
-	font-size: 17px;
-}
-
-.event-date {
-	font-size: 18px;
-}
-
-.event-month {
-	font-size: 17px;
-}
-
-.dig-in {
-	display: none;
-}
 /* Footer 
 -------------------------------------------------*/
 .site-footer {
