@@ -498,6 +498,8 @@ a:active {
 	padding: 20px;
 	margin: 0 0 30px 0;
 	background: #FFF;
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(128, 128, 128, 0.1);
+box-shadow: 0px 5px 20px 0px rgba(128, 128, 128, 0.1);
 }
 
 #secondary {
@@ -579,7 +581,7 @@ header#masthead {
 }
 
 .main-navigation a:hover {
-	color: #C54C22;
+	color: #C4C4C4;
 }
 
 .home .main-navigation {
@@ -680,6 +682,10 @@ header#masthead {
 	margin-bottom: 30px;
 	margin-right: 20px;
 	float: left;
+	height: 210px;
+	overflow: hidden;
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(128, 128, 128, 0.1);
+box-shadow: 0px 5px 20px 0px rgba(128, 128, 128, 0.1);
 }
 
 .publication:nth-child(2n+2) {
@@ -812,6 +818,14 @@ a.slide-button:active {
 	margin: 0 5px;
 }
 
+p.edit-link {
+	text-align: right;
+	margin: 0;
+}
+
+span.edit-link {
+	float: right;
+}
 /* =Asides
 ----------------------------------------------- */
 
@@ -898,6 +912,13 @@ object {
 
 .bypostauthor {
 }
+#disqus_thread {
+	background: white;
+	padding: 20px;
+	margin-bottom: 30px;
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(128, 128, 128, 0.1);
+	box-shadow: 0px 5px 20px 0px rgba(128, 128, 128, 0.1);
+}
 
 /* =Widgets
 ----------------------------------------------- */
@@ -918,6 +939,9 @@ input#s field {
 	margin-right: 5px;
 }
 
+.eventsListWidget .when {
+	color: #888;
+}
 /* Footer 
 -------------------------------------------------*/
 .site-footer {
