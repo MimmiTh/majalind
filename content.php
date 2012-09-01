@@ -13,7 +13,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
-				<?php the_date(); ?>
+				<p><?php the_date(); ?></p>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -26,17 +26,11 @@
             // All other image code here
     } ?>
     
-	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-	<?php else : ?>
 	<div class="entry-content">
 		<?php the_content( __( 'Läs mer <span class="meta-nav">&rarr;</span>', 'maja_lind' ) ); ?>
 		<a href="<?php the_permalink ?>" class="read-more">Läs mer &raquo;</a>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Sidor:', 'maja_lind' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
-	<?php endif; ?>
 
 	<footer class="entry-meta">
 		<?php edit_post_link( __( 'Redigera', 'maja_lind' ), '<span class="edit-link">', '</span>' ); ?>

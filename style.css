@@ -474,7 +474,7 @@ a:active {
 
 #main {
 	width: 960px;
-	padding: 30px 40px;
+	padding: 30px 40px 10px 40px;
 	background: #EEECE2;
 }
 
@@ -786,6 +786,7 @@ a.slide-button:active {
 }
 .entry-meta {
 	clear: both;
+	color: #888;
 }
 .byline {
 	display: none;
@@ -942,6 +943,7 @@ input#s field {
 	padding: 0;
 	width: 290px;
 	margin-right: 45px;
+	margin-bottom: 0;
 }
 
 .site-footer aside:nth-child(3n+3) {
