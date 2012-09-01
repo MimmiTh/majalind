@@ -619,14 +619,14 @@ header#masthead {
     box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
-.home .main-navigation {
-	background: #f4f2e6; /* Old browsers */
-	background: -moz-linear-gradient(top, #f4f2e6 0%, #dbd9d0 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f2e6), color-stop(100%,#dbd9d0)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #f4f2e6 0%,#dbd9d0 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #f4f2e6 0%,#dbd9d0 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #f4f2e6 0%,#dbd9d0 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #f4f2e6 0%,#dbd9d0 100%); /* W3C */
+/*.home .main-navigation {
+	background: #f4f2e6; 
+	background: -moz-linear-gradient(top, #f4f2e6 0%, #dbd9d0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f2e6), color-stop(100%,#dbd9d0)); 
+	background: -webkit-linear-gradient(top, #f4f2e6 0%,#dbd9d0 100%); 
+	background: -o-linear-gradient(top, #f4f2e6 0%,#dbd9d0 100%); 
+	background: -ms-linear-gradient(top, #f4f2e6 0%,#dbd9d0 100%); 
+	background: linear-gradient(to bottom, #f4f2e6 0%,#dbd9d0 100%); 
 }
 
 .home .main-navigation a {
@@ -635,17 +635,17 @@ header#masthead {
 }
 
 .home .main-navigation a:hover {
-	background: #e2e1d9; /* Old browsers */
-	background: -moz-linear-gradient(top, #e2e1d9 0%, #c6c5be 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e1d9), color-stop(100%,#c6c5be)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #e2e1d9 0%,#c6c5be 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #e2e1d9 0%,#c6c5be 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #e2e1d9 0%,#c6c5be 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #e2e1d9 0%,#c6c5be 100%); /* W3C */
+	background: #e2e1d9; 
+	background: -moz-linear-gradient(top, #e2e1d9 0%, #c6c5be 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e1d9), color-stop(100%,#c6c5be)); 
+	background: -webkit-linear-gradient(top, #e2e1d9 0%,#c6c5be 100%); 
+	background: -o-linear-gradient(top, #e2e1d9 0%,#c6c5be 100%); 
+	background: -ms-linear-gradient(top, #e2e1d9 0%,#c6c5be 100%); 
+	background: linear-gradient(to bottom, #e2e1d9 0%,#c6c5be 100%); 
 	-webkit-box-shadow: inset 0px 0px 5px 0px rgba(70, 70, 70, 0.2);      
 	box-shadow: inset 0px 0px 5px 0px rgba(70, 70, 70, 0.2);
 }
-
+*/
 .main-navigation {
 	clear: both;
 	display: block;
