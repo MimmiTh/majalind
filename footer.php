@@ -8,9 +8,6 @@
  * @since Maja Lind 1.0
  */
 ?>
-
-	</div><!-- #main -->
-
 	<footer id="colophon" class="site-footer clearfix" role="contentinfo">
 		<?php do_action( 'before_sidebar' ); ?>
 			<?php if ( ! dynamic_sidebar( 'footer' ) ) : ?>
@@ -22,6 +19,7 @@
 		</div><!-- .site-info -->
 			<?php endif; // end sidebar widget area ?>
 	</footer><!-- #colophon .site-footer -->
+ </div><!-- Wrapper -->
 </div><!-- #page .hfeed .site -->
 
 <?php wp_footer(); ?>

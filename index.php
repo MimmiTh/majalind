@@ -14,7 +14,7 @@
 				the_title();
 				echo '</h2>';				
 				the_content();
-				echo '<a href="'.get_post_meta($post->ID, '_url', true).'">'.get_post_meta($post->ID, '_linktext', true).'</a>';
+				echo '<a class="slide-button" href="'.get_post_meta($post->ID, '_url', true).'">'.get_post_meta($post->ID, '_linktext', true).'</a>';
 				echo '</div>';
 				echo '</li>';
 			endwhile; ?>
