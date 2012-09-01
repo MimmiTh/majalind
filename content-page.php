@@ -15,6 +15,6 @@
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'maja_lind' ), 'after' => '</div>' ) ); ?>
-		<?php edit_post_link( __( 'Edit', 'maja_lind' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Redigera', 'maja_lind' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
