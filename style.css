@@ -798,6 +798,12 @@ a.slide-button:active {
 	clear: both;
 	color: #888;
 }
+
+.entry-meta.date {
+	font-family: 'Jura', serif;
+	font-size: 18px;
+}
+
 .byline {
 	display: none;
 }
@@ -908,7 +914,7 @@ span.edit-link {
 
 #tribe-events-loop .entry-title {
 	font-weight: normal !important;
-	font-size: 20px !important;
+	font-size: 24px !important;
 }
 
 .entry-content.tribe-events-event-entry {
