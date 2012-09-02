@@ -895,6 +895,113 @@ span.edit-link {
 	float: left;
 }
 
+/* Events
+---------------------------------------------------*/
+#tribe-events-loop>div {
+	border-bottom: 1px solid #EEE;
+	padding: 30px 0 !important;
+}
+
+#tribe-events-loop>div:last-child {
+	border: 0;
+}
+
+#tribe-events-loop .entry-title {
+	font-weight: normal !important;
+	font-size: 20px !important;
+}
+
+.entry-content.tribe-events-event-entry {
+	margin-top: 10px;
+}
+
+#tribe-events-loop .entry-title a {
+	color: #C54C22 !important;
+}
+
+#tribe-events-loop .entry-title a:hover {
+	color: #333 !important;
+}
+
+#tribe-events-loop h4.event-day {
+	font-style: normal !important;
+	color: #888;
+	margin-top: 0 !important;
+}
+
+.tribe-events-event-list-meta {
+	border-left: 1px solid #D35F37 !important;
+}
+
+.tribe-events-month-nav {
+	text-transform: capitalize;
+}
+
+.tribe-events-calendar td a {
+	font-size: 100%;
+}
+
+.tribe-events-tooltip .tribe-events-event-title {
+	font-family: 'LiberationSans', sans-serif;
+}
+
+.tribe-events-tooltip .tribe-events-event-date {
+	font-style: normal;
+	color: #888;
+}
+
+table.tribe-events-calendar, .tribe-events-calendar td {
+	border: 1px solid #D6D3C9;
+}
+
+.tribe-events-calendar th {
+	background-color: #F5F5F5;
+}
+
+.tribe-events-calendar td.tribe-events-present .daynum, .tribe-events-calendar td.tribe-events-present .daynum > a {
+	background-color: #CE6F4E;
+}
+.tribe-events-tooltip .tribe-events-event-title {
+	background-color: #CE6F4E;
+}
+
+.tribe-events-calendar .tribe-events-tooltip {
+	border: 1px solid #AFAFAF;
+}
+.tribe-events-tooltip .tribe-events-event-body {
+	font-size: 12px;
+}
+
+.event-passed {
+background: #CE6F4E;
+color: #FFF;
+text-shadow: 0px 1px 1px #773C27;
+border: 0;
+}
+
+span.back {
+	font-size: 16px;
+}
+
+h2.event-title {
+	margin-bottom: 10px;
+	font-size: 26px;
+}
+
+#tribe-events-event-meta.single {
+	padding: 20px 0;
+	border-top: 1px solid #EEE;
+	border-bottom: 1px solid #EEE;
+}
+.tribe-events-month-nav a, .tribe-events-nav a, .back a, .eventsListWidget .dig-in a, .eventsAdvancedListWidget .dig-in a {
+	color: #C54C22;
+}
+
+.tribe-events-month-nav a:hover, .tribe-events-nav a:hover, .back a:hover, .eventsListWidget .dig-in a:hover, .eventsAdvancedListWidget .dig-in a:hover {
+text-decoration: none !important;
+color: #333 !important;
+}
+
 /* =Widgets
 ----------------------------------------------- */
 .widget {
@@ -921,12 +1028,10 @@ input#s field {
 }
 
 /* Events List Widget */
-.eventsListWidget {
-	padding: 20px 20px 5px 20px;
-}
 
 ul.upcoming {
 	position: relative;
+	margin-bottom: 10px;
 }
 
 .eventsListWidget .when {
@@ -971,8 +1076,10 @@ ul.upcoming li:last-child {
 	font-size: 17px;
 }
 
-.dig-in {
-	display: none;
+/* Archive */
+
+.widget_archive li {
+	text-transform: capitalize;
 }
 
 /* =Asides
