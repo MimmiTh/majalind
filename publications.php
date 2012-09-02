@@ -7,7 +7,9 @@ Template Name: Publikationer
 <?php get_header(); ?>
 
 	<div id="main" class="clearfix">
-
+		
+		<h1 class="page-title"><?php the_title(); ?></h1>
+		
 		<div id="primary" role="main" class="publications">
 
 	

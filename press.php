@@ -6,6 +6,9 @@ Template Name: Press
 <?php get_header(); ?>
 
 	<div id="main" class="clearfix">
+		
+		<h1 class="page-title"><?php the_title(); ?></h1>
+		
 		<div id="primary" role="main" class="page">
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post();?>
@@ -21,6 +24,7 @@ Template Name: Press
 			
 		</div><!--#primary-->
 		
+		<div class="press-area">
 			<?php $args = array( 'post_type' => 'press', 'posts_per_page' => 100 );
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post();
@@ -34,6 +38,7 @@ Template Name: Press
 					echo '</a>';
 					echo '</div>';
 				endwhile; ?>
-
+		</div>
+		
 	</div><!-- #main -->
 <?php get_footer(); ?>

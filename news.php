@@ -7,6 +7,7 @@ Template Name: Nyheter
 <?php get_header(); ?>
 
 	<div id="main" class="clearfix">
+		
 		<div id="primary" role="main">
 			
 			<?php 

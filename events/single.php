@@ -14,7 +14,7 @@ if ( !defined('ABSPATH') ) { die('-1'); }
  	$gmt_offset = str_replace( array( '.25', '.5', '.75' ), array( ':15', ':30', ':45' ), $gmt_offset );
  	if (strtotime( tribe_get_end_date(get_the_ID(), false, 'Y-m-d G:i') . $gmt_offset ) <= time() ) { ?><div class="event-passed"><?php  _e('This event has passed.', 'tribe-events-calendar') ?></div><?php } ?>
 
-<h2 class="event-title"><?php the_title(); ?></h2>
+<h1 class="event-title"><?php the_title(); ?></h1>
 <div class="entry">
 	<?php
 	if ( function_exists('has_post_thumbnail') && has_post_thumbnail() ) {?>

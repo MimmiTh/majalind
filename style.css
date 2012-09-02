@@ -871,10 +871,17 @@ span.edit-link {
 
 /* Pages
 -------------------------------------------------*/
-		
+#primary.page .entry-content {
+	margin: 0;
+}
+
+.page-title {
+	margin-bottom: 20px;
+}
+
 #primary.page {
-	width: 920px;
-	padding: 20px;
+	width: 880px;
+	padding: 40px;
 	margin: 0 0 30px 0;
 	background: #FFF;
 	-webkit-box-shadow: 0px 5px 20px 0px rgba(196, 193, 183, 0.1);
@@ -890,7 +897,7 @@ span.edit-link {
 .not-found .widget {
 	float: left;
 	padding-left: 0;
-	padding-right: 40px;
+	padding-right: 55px;
 }
 
 /* Publications
@@ -936,6 +943,19 @@ span.edit-link {
 
 /* Events
 ---------------------------------------------------*/
+
+#tribe-events-content {
+	padding: 0;
+}
+
+.events-single h1.page-title {
+	display: none;
+}
+
+.event-title {
+	margin-bottom: 15px;
+}
+
 #tribe-events-loop>div {
 	border-bottom: 1px solid #EEE;
 	padding: 30px 0 !important;
@@ -1046,10 +1066,9 @@ color: #333 !important;
 .press-img {
 	float: left;
 	background: #FFF;
-	padding: 20px;
 	margin: 0 30px 30px 0;
-	width: 260px;
-	height: 200px;
+	width: 300px;
+	height: 210px;
 	position: relative;
 	overflow: hidden;
 	cursor: pointer;
@@ -1067,10 +1086,10 @@ color: #333 !important;
 
 .press-img .description {
 	position: absolute;
-	top: 20px;
-	left: 20px;
-	width: 260px;
-	height: 140px;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
 	text-align: center;
 	background: #CC572E;
 	background: rgba(204, 87, 46, 0.8);
@@ -1090,8 +1109,8 @@ color: #333 !important;
 }
 
 .press-img img {
-	width: 260px;
-	height: 200px;
+	width: 300px;
+	height: 210px;
 }
 /* =Widgets
 ----------------------------------------------- */

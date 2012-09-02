@@ -65,7 +65,7 @@ function maja_lind_setup() {
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'slide-img', 400, 250 );
 	add_image_size( 'post-img', 600, 200, true);
-	add_image_size( 'press-img', 260, 200, true);
+	add_image_size( 'press-img', 300, 210, true);
 }
 
 	/**

@@ -14,8 +14,11 @@
 get_header(); ?>
 
 		<div id="main" class="clearfix">
-			<div id="primary" role="main" class="page">
+			
+			<h1 class="page-title"><?php the_title(); ?></h1>
 
+			<div id="primary" role="main" class="page">
+				
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'content', 'page' ); ?>
