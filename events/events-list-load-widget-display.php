@@ -46,7 +46,7 @@ ob_end_clean();
 	</div>
 	
 	<div class="event">
-		<h3><?php echo $post->post_title ?></h3>
+		<h3><a href="<?php the_permalink(); ?>"><?php echo $post->post_title ?></a></h3>
 	</div>
 
 </li>

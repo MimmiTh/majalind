@@ -20,7 +20,7 @@ Template Name: Nyheter
 							<h2 class="entry-title">
 								<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalänk till %s', 'maja_lind' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 							</h2>
-							<div class="entry-meta">
+							<div class="entry-meta date">
 								<p><?php the_date();?>
 							</div><!-- .entry-meta -->				
 						</header><!-- .entry-header -->
