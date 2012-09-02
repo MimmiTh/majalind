@@ -8,10 +8,10 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
+	<div id="main" class="clearfix">
+		<div id="primary" role="main" class="page">
 
-			<article id="post-0" class="post error404 not-found">
+			<article id="post-0" class="post error404 not-found page">
 				<header class="entry-header">
 					<h1 class="entry-title"><?php _e( 'Hoppsan! Sidan kunde inte hittas.', 'maja_lind' ); ?></h1>
 				</header><!-- .entry-header -->
@@ -31,12 +31,8 @@ get_header(); ?>
 					</div><!-- .widget -->
 
 					<?php
-					/* translators: %1$s: smilie */
-					$archive_content = '<p>' . sprintf( __( 'Prova leta i arkivet. %1$s', 'maja_lind' ), convert_smilies( ':)' ) ) . '</p>';
 					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 					?>
-
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 .post .error404 .not-found -->
