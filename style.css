@@ -837,6 +837,27 @@ span.edit-link {
 	float: right;
 }
 
+.news-nav {
+	margin-bottom: 30px;
+	height: 1em;
+	position: relative;
+}
+
+.news-nav .prev-link {
+	width: 320px;
+	display: block;
+	position: absolute;
+	left: 0;
+}
+
+.news-nav .next-link {
+	width: 320px;
+	display: block;
+	text-align: right;
+	position: absolute;
+	right: 0;
+}
+	
 /* =Comments
 ----------------------------------------------- */
 
@@ -1027,9 +1048,9 @@ color: #333 !important;
 }
 
 .press-img a {
-width: 260px;
-height: 200px;
-display: block;
+	width: 260px;
+	height: 200px;
+	display: block;
 }
 
 .press-img .description {

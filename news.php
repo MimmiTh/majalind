@@ -11,7 +11,7 @@ Template Name: Nyheter
 			
 			<?php 
 				$posts = new WP_Query();
-				$posts->query('showposts=10');
+				$posts->query('showposts=5&paged='.$paged );
 			
 				while ($posts->have_posts()) : $posts->the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -39,6 +39,11 @@ Template Name: Nyheter
 					</article>
 				
 				<?php endwhile; ?>
+				
+				<div class="news-nav">
+					<span class="prev-link"><?php next_posts_link( '&laquo; Äldre inlägg', $posts->max_num_pages); ?></span>
+					<span class="next-link"><?php previous_posts_link('Nyare inlägg &raquo;'); ?></span>
+				</div>
 
 		</div><!-- #primary -->
 			 
