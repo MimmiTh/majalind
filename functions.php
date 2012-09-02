@@ -1,6 +1,6 @@
 <?php
 /**
- * Maja Lind functions and definitions
+ * Temats funktioner och definitioner
  *
  * @package Maja Lind
  * @since Maja Lind 1.0
@@ -65,6 +65,7 @@ function maja_lind_setup() {
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'slide-img', 400, 250 );
 	add_image_size( 'post-img', 600, 200, true);
+	add_image_size( 'press-img', 260, 200, true);
 }
 
 	/**
@@ -82,12 +83,10 @@ if ( function_exists( 'add_image_size' ) ) {
 endif; // maja_lind_setup
 add_action( 'after_setup_theme', 'maja_lind_setup' );
 
-/**
- * Register widgetized area and update sidebar with default widgets
- *
- * @since Maja Lind 1.0
- */
+// Register widgetized area and update sidebar with default widgets
+
 function maja_lind_widgets_init() {
+	
 	register_sidebar( array(
 		'name' => __( 'Sidomeny', 'maja_lind' ),
 		'description' => __('Sidomeny för startsidan'),
@@ -140,8 +139,12 @@ function maja_lind_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'maja_lind_scripts' );
 
+// Custom Post Types
+
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
+	
+	// Publications
 	register_post_type( 'publications',
 		array(
 			'labels' => array(
@@ -173,10 +176,39 @@ function create_post_type() {
 		)
 	);
 }
+	// Press
+	register_post_type( 'press',
+		array(
+			'labels' => array(
+				'name' => _x('Press', 'post type general name'),
+				'singular_name' => _x('Pressbild', 'post type singular name'),
+				'add_new' => _x('Lägg till', 'slide'),
+				'add_new_item' => __('Lägg till ny pressbild'),
+				'edit_item' => __('Redigera pressbild'),
+				'new_item' => __('Ny pressbild'),
+				'view_item' => __('Visa pressbild'),
+				'search_items' => __('Sök pressbilder'),
+				'not_found' => __('Inga pressbilder funna'),
+				'not_found_in_trash' => __('Inga pressbilder funna i papperskorgen'), 
+				'parent_item_colon' => '',
+				'menu_name' => 'Press och media',
+			),
+			
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true, 
+		'show_in_menu' => true, 
+		'query_var' => true,
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'has_archive' => true, 
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title', 'editor', 'thumbnail'),
+		)
+	);
 
-/* Register a Custom Post Type (Slide) */
-add_action('init', 'slide_init');
-function slide_init() {
+	// Slides 
 	$labels = array(
 		'name' => _x('Slides', 'post type general name'),
 		'singular_name' => _x('Slide', 'post type singular name'),
@@ -207,8 +239,9 @@ function slide_init() {
 		'register_meta_box_cb' => 'add_slide_link'
 	); 
 	register_post_type('slide', $args);
-}
 
+
+// Slideshow read more-link meta box
 function add_slide_link() {
     add_meta_box('slide_link', 'Slide-länk', 'print_slide_link_form', 'slide', 'side', 'default');
 }
@@ -279,8 +312,6 @@ function slide_updated_messages($messages) {
 	);
 	return $messages;
 }
-
-
 
 /**
  * Implement the Custom Header feature
