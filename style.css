@@ -390,37 +390,34 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid #ccc;
-	border-color: #ccc #ccc #bbb #ccc;
-	border-radius: 3px;
-	background: #fafafa; /* Old browsers */
-	background: -moz-linear-gradient(top,  #fafafa 60%, #e6e6e6 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#fafafa), color-stop(100%,#e6e6e6)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* IE10+ */
-	background: linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* W3C */
-	box-shadow: inset 0 2px 1px #fff;
-	color: rgba(0,0,0,.8);
-	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-	font-size: 12px;
-	font-size: 1.4rem;
-	padding: 5px;
-	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	color: #FFF;
+	background: #db5427; /* Old browsers */
+	background: -moz-linear-gradient(top, #db5427 0%, #ba4721 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#db5427), color-stop(100%,#ba4721)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #db5427 0%,#ba4721 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #db5427 0%,#ba4721 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #db5427 0%,#ba4721 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #db5427 0%,#ba4721 100%); /* W3C */
+	-webkit-box-shadow:  0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow:  0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+	padding: 6px 12px;
+    -webkit-border-radius: 2px;    
+    border-radius: 2px;
+    text-shadow: 0px 1px 1px #773C27;
+    border: 0;
+    cursor: pointer;
 }
 button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: #f5f5f5; /* Old browsers */
-	background: -moz-linear-gradient(top,  #f5f5f5 60%, #dcdcdc 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#f5f5f5), color-stop(100%,#dcdcdc)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* IE10+ */
-	background: linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* W3C */
-	border-color: #bbb #bbb #aaa #bbb;
+	background: #ce4f25; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ce4f25 0%, #a03b1c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ce4f25), color-stop(100%,#a03b1c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ce4f25 0%,#a03b1c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ce4f25 0%,#a03b1c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ce4f25 0%,#a03b1c 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ce4f25 0%,#a03b1c 100%); /* W3C */
 }
 button:focus,
 html input[type="button"]:focus,
@@ -430,9 +427,13 @@ button:active,
 html input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb #bbb;
-	box-shadow: inset 0 2px 3px rgba(0,0,0,.15);
-	box-shadow: inset 0 2px 2px rgba(0,0,0,.15);
+	background: #a03b1c; /* Old browsers */
+	background: -moz-linear-gradient(top, #a03b1c 0%, #ce4f25 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a03b1c), color-stop(100%,#ce4f25)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #a03b1c 0%,#ce4f25 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #a03b1c 0%,#ce4f25 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #a03b1c 0%,#ce4f25 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #a03b1c 0%,#ce4f25 100%); /* W3C */
 }
 
 input[type="checkbox"],
@@ -468,7 +469,7 @@ textarea:focus {
 }
 input[type=text],
 input[type=email] {
-	padding: 3px;
+	padding: 5px;
 }
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
@@ -1032,7 +1033,7 @@ table.tribe-events-calendar, .tribe-events-calendar td {
 }
 
 .event-passed {
-background: #CE6F4E;
+background: #CE4F25;
 color: #FFF;
 text-shadow: 0px 1px 1px #773C27;
 border: 0;
@@ -1112,6 +1113,93 @@ color: #333 !important;
 	width: 300px;
 	height: 210px;
 }
+
+/* Contact
+-------------------------------------------------*/
+
+#primary.contact {
+	width: 960px;
+	margin-right: 0;
+	margin-bottom: 30px;
+}
+
+#contact-form{
+	width: 515px;
+	margin-right: 30px;
+	float: left;
+	background: #FFF;
+	padding: 40px;
+}
+
+#contact-text {
+	float: left;
+	width: 255px;
+	background: #FFF;
+	padding: 40px;
+}
+
+.wpcf7-submit {
+	float: right;
+	color: #FFF;
+	background: #db5427; /* Old browsers */
+	background: -moz-linear-gradient(top, #db5427 0%, #ba4721 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#db5427), color-stop(100%,#ba4721)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #db5427 0%,#ba4721 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #db5427 0%,#ba4721 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #db5427 0%,#ba4721 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #db5427 0%,#ba4721 100%); /* W3C */
+	-webkit-box-shadow:  0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow:  0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+	padding: 6px 12px;
+    -webkit-border-radius: 2px;    
+    border-radius: 2px;
+    text-shadow: 0px 1px 1px #773C27;
+}
+
+.wpcf7-submit:hover {
+	background: #ce4f25; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ce4f25 0%, #a03b1c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ce4f25), color-stop(100%,#a03b1c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ce4f25 0%,#a03b1c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ce4f25 0%,#a03b1c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ce4f25 0%,#a03b1c 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ce4f25 0%,#a03b1c 100%); /* W3C */
+}
+
+.wpcf7-submit:active {
+	background: #a03b1c; /* Old browsers */
+	background: -moz-linear-gradient(top, #a03b1c 0%, #ce4f25 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a03b1c), color-stop(100%,#ce4f25)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #a03b1c 0%,#ce4f25 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #a03b1c 0%,#ce4f25 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #a03b1c 0%,#ce4f25 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #a03b1c 0%,#ce4f25 100%); /* W3C */
+}
+
+div.wpcf7-response-output, span.wpcf7-not-valid-tip {
+	background: #CE4F25;
+	color: white;
+	text-shadow: 0px 1px 1px #773C27;
+	border: 0;
+	border-radius: 4px;
+	padding: 8px 35px 8px 14px;
+}
+
+div.wpcf7-mail-sent-ok {
+	background: #5D9B10;
+	text-shadow: 0px 1px 1px #104E00;
+}
+
+span.wpcf7-not-valid-tip {
+	position: absolute;
+	top: -5px;
+	z-index: 100;
+	font-size: 10pt;
+	width: 170px;
+	padding: 4px 10px;
+	left: 345px;
+}
+	
 /* =Widgets
 ----------------------------------------------- */
 .widget {
@@ -1131,6 +1219,9 @@ color: #333 !important;
     box-shadow:  0px 5px 20px 0px rgba(196, 193, 183, 0.1);
 }
 
+.attribution li {
+	margin-bottom: 10px;
+}
 /* Search widget */
 input#s field {
 	width: 165px;
