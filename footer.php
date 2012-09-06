@@ -11,9 +11,7 @@
 		<?php if ( ! dynamic_sidebar( 'footer' ) ) : ?>
 			<div class="site-info">
 				<?php do_action( 'maja_lind_credits' ); ?>
-				<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'maja_lind' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'maja_lind' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %1$s by %2$s.', 'maja_lind' ), 'maja_lind', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
+				<p>Tema designat av <a href="http://mimmithorneus.se/">Mimmi Thorneus</a><br>Facebook- och Twitter-ikon från <a href="http://sharevectors.com">Share Vectors</a></p>
 			</div><!-- .site-info -->
 		<?php endif; // end sidebar widget area ?>
 	</footer><!-- #colophon .site-footer -->
