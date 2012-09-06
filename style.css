@@ -533,6 +533,7 @@ header#masthead {
 	width: 80px;
 	float: right;
 	margin-top: 7px;
+	text-align: right;
 }
 
 #social-media img {
@@ -545,8 +546,8 @@ header#masthead {
 	opacity: 1.0;
 }
 
-#social-media #facebook {
-	margin-right: 10px;
+#social-media #twitter {
+	margin-left: 10px;
 }
 
 .site-title, .site-description {

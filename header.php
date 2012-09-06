@@ -65,8 +65,16 @@
 			</div>
 			
 			<div id="social-media">
-				<a id="facebook" href=""><img alt="Facebook" src="<?php echo get_template_directory_uri(); ?>/images/fb.png"></a>
-				<a id="twitter" href=""><img alt="Twitter" src="<?php echo get_template_directory_uri(); ?>/images/twit.png"></a>
+				<?php 
+				$facebook = get_option('facebook');
+				$twitter = get_option('twitter');
+				
+				if (filter_var($facebook, FILTER_VALIDATE_URL)) {					
+					echo '<a id="facebook" href="'.get_option('facebook').'"><img alt="Facebook" src="'.get_template_directory_uri().'/images/fb.png"></a>';
+				}
+				if (filter_var($twitter, FILTER_VALIDATE_URL)) {
+					echo '<a id="twitter" href="'.get_option('twitter').'"><img alt="Twitter" src="'.get_template_directory_uri().'/images/twit.png"></a>';
+				} ?>
 			</div>
 		</header><!-- #masthead .site-header -->
 

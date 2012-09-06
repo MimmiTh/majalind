@@ -83,6 +83,25 @@ if ( function_exists( 'add_image_size' ) ) {
 endif; // maja_lind_setup
 add_action( 'after_setup_theme', 'maja_lind_setup' );
 
+
+//Add settings fields
+function setting_api_init() {
+	add_settings_field('facebook', 'Facebook-länk', 'facebook_link_field', 'general');
+	register_setting('general', 'facebook');
+	add_settings_field('twitter', 'Twitter-länk', 'twitter_link_field', 'general');
+	register_setting('general', 'twitter');
+}
+
+add_action('admin_init', 'setting_api_init');
+
+function facebook_link_field() {
+	echo '<input type="text" name="facebook" id="facebook" value="'.get_option('facebook').'">';
+}
+
+function twitter_link_field() {
+	echo '<input type="text" name="twitter" id="facebook" value="'.get_option('twitter').'">';
+}
+	
 // Register widgetized area and update sidebar with default widgets
 
 function maja_lind_widgets_init() {
