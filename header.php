@@ -54,7 +54,9 @@
 	<?php wp_head(); ?>
 
 </head>
-
+  <!--[if IE 8]><body <?php body_class('ie'); ?>><![endif]-->
+    <!--[if IE 7]><body <?php body_class('ie'); ?>><![endif]-->
+    <!--[if IE 6]><body <?php body_class('ie'); ?>><![endif]-->
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
 		<?php do_action( 'before' ); ?>
