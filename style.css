@@ -726,6 +726,12 @@ ol.flex-control-paging {
 	display: none;
 }
 
+.slide-content {
+	width: 960px;
+	float: none;
+	margin: 0;
+}
+
 .slide-left {
 	width: 400px;
 	float: left;
@@ -739,6 +745,7 @@ ol.flex-control-paging {
 
 ul.slides {
 	margin: 0;
+	height: 250px;
 }
 
 a.slide-button {

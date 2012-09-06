@@ -5,18 +5,30 @@
 			<?php $args = array( 'post_type' => 'slide', 'posts_per_page' => 5 );
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post();
-					echo '<li class="slide clearfix">';
-					echo '<div class="slide-left">';
-					the_post_thumbnail('slide-img');
-					echo '</div>';
-					echo '<div class="slide-right">';						
-					echo '<h2>';
-					the_title();
-					echo '</h2>';				
-					the_content();
-					echo '<a class="slide-button" href="'.get_post_meta($post->ID, '_url', true).'">'.get_post_meta($post->ID, '_linktext', true).'</a>';
-					echo '</div>';
-					echo '</li>';
+					if ( has_post_thumbnail() ) {
+						echo '<li class="slide clearfix">';
+						echo '<div class="slide-left">';
+						the_post_thumbnail('slide-img');
+						echo '</div>';
+						echo '<div class="slide-right">';						
+						echo '<h2>';
+						the_title();
+						echo '</h2>';				
+						the_content();
+						echo '<a class="slide-button" href="'.get_post_meta($post->ID, '_url', true).'">'.get_post_meta($post->ID, '_linktext', true).'</a>';
+						echo '</div>';
+						echo '</li>';
+					} else {
+						echo '<li class="slide clearfix">';
+						echo '<div class="slide-content">';						
+						echo '<h2>';
+						the_title();
+						echo '</h2>';				
+						the_content();
+						echo '<a class="slide-button" href="'.get_post_meta($post->ID, '_url', true).'">'.get_post_meta($post->ID, '_linktext', true).'</a>';
+						echo '</div>';
+						echo '</li>';
+					}						
 				endwhile; 
 			?>
 		</ul><!--.slides -->
