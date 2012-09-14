@@ -25,7 +25,7 @@ Template Name: Publikationer
 					echo '<h2>'; ?>
 					<a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a>
 					<?php echo '</h2>';
-					the_content();
+					the_excerpt();
 					echo '</div>';
 					echo '</div>';
 
@@ -35,7 +35,7 @@ Template Name: Publikationer
 					echo '<h2>'; ?>
 					<a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a>
 					<?php echo '</h2>';
-					the_content();
+					the_excerpt();
 					echo '</div>';
 					echo '</div>';
 				}

@@ -191,7 +191,7 @@ function create_post_type() {
 		'has_archive' => true, 
 		'hierarchical' => false,
 		'menu_position' => null,
-		'supports' => array('title', 'editor', 'thumbnail'),
+		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
 		)
 	);
 }
