@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<div id="content-slider" class="flexslider">
-		<ul class="slides">
+			<ul class="slides">
 			<?php $args = array( 'post_type' => 'slide', 'posts_per_page' => 5 );
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post();
@@ -15,7 +15,9 @@
 						the_title();
 						echo '</h2>';				
 						the_content();
-						echo '<a class="slide-button" href="'.get_post_meta($post->ID, '_url', true).'">'.get_post_meta($post->ID, '_linktext', true).'</a>';
+						if (get_post_meta($post->ID, '_url', true) !== '') {
+							echo '<a class="slide-button" href="'.get_post_meta($post->ID, '_url', true).'">'.get_post_meta($post->ID, '_linktext', true).'</a>';
+						}
 						echo '</div>';
 						echo '</li>';
 					} else {
@@ -25,7 +27,9 @@
 						the_title();
 						echo '</h2>';				
 						the_content();
-						echo '<a class="slide-button" href="'.get_post_meta($post->ID, '_url', true).'">'.get_post_meta($post->ID, '_linktext', true).'</a>';
+						if (get_post_meta($post->ID, '_url', true) !== '') {
+							echo '<a class="slide-button" href="'.get_post_meta($post->ID, '_url', true).'">'.get_post_meta($post->ID, '_linktext', true).'</a>';
+						}
 						echo '</div>';
 						echo '</li>';
 					}						
