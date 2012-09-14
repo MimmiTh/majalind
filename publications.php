@@ -22,9 +22,9 @@ Template Name: Publikationer
 					the_post_thumbnail();
 					echo '</div>';
 					echo '<div class="publications-right">';
-					echo '<h2>';
-					the_title();
-					echo '</h2>';
+					echo '<h2>'; ?>
+					<a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a>
+					<?php echo '</h2>';
 					the_content();
 					echo '</div>';
 					echo '</div>';
@@ -32,9 +32,9 @@ Template Name: Publikationer
 				} else {
 					echo '<div class="publication clearfix">';
 					echo '<div class="publication-content">';
-					echo '<h2>';
-					the_title();
-					echo '</h2>';
+					echo '<h2>'; ?>
+					<a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a>
+					<?php echo '</h2>';
 					the_content();
 					echo '</div>';
 					echo '</div>';
