@@ -9,15 +9,16 @@
 get_header(); ?>
 
 		<section id="main" class="clearfix">
-			<div id="primary" role="main">
-
-			<?php if ( have_posts() ) : ?>
-
+				
 				<header class="page-header">
 					<h1 class="page-title"><?php printf( __( 'Sökresultat för: %s', 'maja_lind' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header><!-- .page-header -->
+				
+			<div id="primary" class="search" role="main">
 
-				<?php maja_lind_content_nav( 'nav-above' ); ?>
+			<?php if ( have_posts() ) : ?>
+
+
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -26,7 +27,6 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php maja_lind_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 
@@ -35,8 +35,8 @@ get_header(); ?>
 			<?php endif; ?>
 
 			</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+			
+			<?php get_sidebar('blog'); ?>
 
 </section><!-- #main -->
 <?php get_footer(); ?>
